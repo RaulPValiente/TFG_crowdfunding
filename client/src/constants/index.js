@@ -1,28 +1,18 @@
 export const navlinks = [
     {
-      name: 'dashboard',
+      name: 'Home',
       link: '/',
     },
     {
-      name: 'campaign',
+      name: 'Campaign',
       link: '/create-campaign',
     },
     {
-      name: 'payment',
-      link: '/',
-      disabled: true,
-    },
-    {
-      name: 'withdraw',
-      link: '/',
-      disabled: true,
-    },
-    {
-      name: 'profile',
+      name: 'Profile',
       link: '/profile',
     },
     {
-      name: 'logout',
+      name: 'Logout',
       link: '/',
       disabled: true,
     },
