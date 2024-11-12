@@ -22,23 +22,23 @@ const Navbar = () => {
             placeholder="Search for campaigns"
             className="flex w-full text-[14px] placeholder:text-[#4b5264] text-white bg-transparent outline-none ml-2"
           />
-          <div className="w-[60px] h-[36px] rounded-full bg-[#024CAA] flex justify-center items-center cursor-pointer ml-2">
+          <div className="w-[60px] h-[36px] rounded-full bg-[#785dc7] flex justify-center items-center cursor-pointer ml-2">
             <img src={search} alt="search" className="w-[18px] h-[18px] object-contain" />
           </div>
         </div>
 
         <CustomButton
           btnType="button"
-          title="Create a Campaign"
-          styles="bg-[#024CAA] px-3 py-1 text-[14px] rounded-full"
+          title="Create Campaign ➕"
+          styles="bg-black px-3 py-1 text-[14px] rounded-lg border border-white/20 hover:bg-[#080119]"
           handleClick={() => navigate('create-campaign')}
         />
       </div>
 
-      {/* Perfil a la derecha */}
+      {/* Perfil a la derecha con efecto de "halo" al hacer hover */}
       <Link to="/profile" className="flex-shrink-0">
-        <div className="w-[50px] h-[50px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
-          <img src={user} alt="user" className="w-[100%] h-[100%] object-contain" />
+        <div className="w-[50px] h-[50px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer hover:shadow-[0_0_15px_5px_rgba(120,93,199,0.6)] transition-shadow duration-300">
+          <img src={user} alt="user" className="w-[100%] h-[100%] object-contain m-0 p-0" />
         </div>
       </Link>
     </div>
@@ -46,4 +46,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

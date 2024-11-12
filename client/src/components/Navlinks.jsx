@@ -8,8 +8,8 @@ const Navlinks = () => {
 
   return (
     <nav className="w-full py-4 flex justify-center">
-      <div className="flex items-center rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(204,204,204,0.09)_20.17%,rgba(255,255,255,0.11)_100%)] shadow-[0px_1px_0px_0px_rgba(0,0,0,0.05),0px_4px_4px_0px_rgba(0,0,0,0.05),0px_10px_10px_0px_rgba(0,0,0,0.10)] backdrop-blur-[10px] gap-3 px-2 py-1">
-        {navlinks.map((link) => (
+      <div className="flex items-center rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(204,204,204,0.09)_20.17%,rgba(255,255,255,0.11)_100%)] shadow-[0px_1px_0px_0px_rgba(0,0,0,0.05),0px_4px_4px_0px_rgba(0,0,0,0.05),0px_10px_10px_0px_rgba(0,0,0,0.10)] backdrop-blur-[10px] gap-3 px-1 py-1">
+        {navlinks.map((link, index) => (
           <button
             key={link.name}
             onClick={() => {
@@ -18,9 +18,9 @@ const Navlinks = () => {
                 navigate(link.link);
               }
             }}
-            className={`text-white font-medium px-4 py-2 text-[13px] leading-[20px] border ${
+            className={`text-white font-medium px-4 py-2 text-[13px] leading-[20px] border transition-colors duration-200 ${
               isActive === link.name ? 'border border-white/10 bg-[#2c2f32] rounded-full' : 'border-transparent rounded-full'
-            }`}
+            } ${index === navlinks.length - 1 ? 'bg-red-500 hover:bg-[#B8001F]' : 'hover:bg-gray-200/10'}`}
           >
             {link.name}
           </button>

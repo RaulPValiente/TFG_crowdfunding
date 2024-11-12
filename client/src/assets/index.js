@@ -9,9 +9,8 @@ import withdraw from './withdraw.svg';
 import tagType from './type.svg';
 import search from './search.svg';
 import menu from './menu.svg';
-import money from './money.svg';
 import loader from './loader.svg';
-import user from './user.png';
+import user from './user.svg';
 
 export {
   tagType,
@@ -25,7 +24,6 @@ export {
   withdraw,
   search,
   menu,
-  money,
   loader,
   user
 };

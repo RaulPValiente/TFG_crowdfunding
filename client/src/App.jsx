@@ -6,7 +6,7 @@ import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 
 const App = () => {
   return (
-    <div className="sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-col">
+    <div className="sm:-8 p-4 bg-[#05000f] min-h-screen flex flex-col">
       <div className="w-full">
         <Navbar />
         <Navlinks />
