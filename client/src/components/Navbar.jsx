@@ -1,10 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 
 import { CustomButton } from './';
+import { useStateContext } from '../state';
 import { logo, search, user } from '../assets';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const { connect, address } = useStateContext();
+  
 
   return (
     <div className="flex justify-between items-center w-full px-[50px] py-4 mx-auto">
@@ -27,11 +30,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        <CustomButton
+        <CustomButton 
           btnType="button"
-          title="Create Campaign ➕"
-          styles="bg-black px-3 py-1 text-[14px] rounded-lg border border-white/20 hover:bg-[#080119]"
-          handleClick={() => navigate('create-campaign')}
+          title={address ? 'Create a campaign' : 'Connect Wallet'}
+          styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
+          handleClick={() => {
+            if(address) navigate('create-campaign')
+            else connect()
+          }}
         />
       </div>
 
