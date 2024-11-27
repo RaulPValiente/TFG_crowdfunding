@@ -47,13 +47,18 @@ const CreateCampaign = () => {
     <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:p-10 p-4">
       {isLoading && <Loader />}
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] flex-col">
-        <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white">New Campaign</h1>
+        <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white">
+          New Campaign
+        </h1>
         <h2 className="flex-1 sm:text-[15px] text-[10px] leading-[38px] text-white/70">
           Take Your Project to the Next Level
         </h2>
       </div>
 
-      <form onSubmit={handleSubmit} className="w-full mt-[30px] flex flex-col gap-[30px]">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full mt-[30px] flex flex-col gap-[30px]"
+      >
         <div className="flex flex-wrap gap-[40px]">
           <FormField
             labelName="Your Name *"
@@ -107,8 +112,8 @@ const CreateCampaign = () => {
         <div className="flex justify-center items-center mt-[40px]">
           <CustomButton
             btnType="submit"
-            title="Submit Campaign ➕"
-            styles="bg-black px-3 py-1 text-[14px] rounded-lg border border-white/20 hover:bg-[#080119]"
+            title="Submit Campaign"
+            styles="bg-gradient-to-r from-[#785dc7] to-[#4a34a5] px-3 py-1 text-[14px] rounded-lg border border-white/20 hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf]"
           />
         </div>
       </form>

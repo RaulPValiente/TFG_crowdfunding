@@ -30,15 +30,19 @@ const Navbar = () => {
           </div>
         </div>
 
-        <CustomButton 
-          btnType="button"
-          title={address ? 'Create a campaign' : 'Connect Wallet'}
-          styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
-          handleClick={() => {
-            if(address) navigate('create-campaign')
-            else connect()
-          }}
-        />
+        <CustomButton
+  btnType="button"
+  title={address ? 'Create a Campaign' : 'Connect Wallet'}
+  styles={`h-11 pl-5 pr-5 py-2.5 rounded-lg shadow border border-white/30 backdrop-blur-[20px] justify-start items-center gap-2.5 inline-flex cursor-pointer group
+    bg-gradient-to-r from-[#785dc7] to-[#4a34a5]
+    hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf]`}
+  handleClick={() => {
+    if (address) navigate('create-campaign');
+    else connect();
+  }}
+/>
+
+
       </div>
 
       {/* Perfil a la derecha con efecto de "halo" al hacer hover */}
