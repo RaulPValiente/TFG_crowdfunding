@@ -10,12 +10,14 @@ import menu from './menu.svg';
 import loader from './loader.svg';
 import user from './user.svg';
 import user2 from './user2.svg';
+import eth from './ethereum.svg';
 
 export {
   createCampaign,
   dashboard,
   logo,
   logout,
+  eth,
   payment,
   profile,
   withdraw,

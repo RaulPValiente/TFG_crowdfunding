@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 
 import { useStateContext } from '../state';
 import { Data, CustomButton, Loader } from '../components';
-import { calculateBarPercentage, daysLeft } from '../helpers';
+import { BarPercentage, daysLeft } from '../helpers';
 import { user2 } from '../assets';
 
 const CampaignDetails = () => {
@@ -52,7 +52,7 @@ const CampaignDetails = () => {
             <div
               className="absolute h-full bg-[#4acd8d]"
               style={{
-                width: `${calculateBarPercentage(
+                width: `${BarPercentage(
                   state.target,
                   state.amountCollected
                 )}%`,
@@ -162,12 +162,11 @@ const CampaignDetails = () => {
               </div>
 
               <CustomButton
-  btnType="button"
-  title="Fund Campaign"
-  styles="w-full h-11 bg-gradient-to-r from-[#785dc7] to-[#4a34a5] rounded-lg hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf] shadow border border-white cursor-pointer"
-  handleClick={handleDonate}
-/>
-
+                btnType="button"
+                title="Fund Campaign"
+                styles="w-full h-11 bg-gradient-to-r from-[#785dc7] to-[#4a34a5] rounded-lg hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf] shadow border border-white cursor-pointer"
+                handleClick={handleDonate}
+              />
             </div>
           </div>
         </div>

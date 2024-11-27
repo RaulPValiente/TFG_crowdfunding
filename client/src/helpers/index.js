@@ -1,4 +1,4 @@
-export const calculateBarPercentage = (goal, raisedAmount) => {
+export const BarPercentage = (goal, raisedAmount) => {
   const percentage = (raisedAmount / goal) * 100;
 
   return Math.min(Math.max(Math.round(percentage), 0), 100);

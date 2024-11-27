@@ -44,7 +44,7 @@ const CreateCampaign = () => {
   };
 
   return (
-    <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:p-10 p-4">
+    <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:py-3 sm:px-10 p-4">
       {isLoading && <Loader />}
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] flex-col">
         <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white">
@@ -57,7 +57,7 @@ const CreateCampaign = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="w-full mt-[30px] flex flex-col gap-[30px]"
+        className="w-full mt-[20px] flex flex-col gap-[30px]"
       >
         <div className="flex flex-wrap gap-[40px]">
           <FormField
@@ -109,7 +109,7 @@ const CreateCampaign = () => {
           handleChange={(e) => handleFormFieldChange('image', e)}
         />
 
-        <div className="flex justify-center items-center mt-[40px]">
+        <div className="flex justify-center items-center mt-[20px]">
           <CustomButton
             btnType="submit"
             title="Submit Campaign"

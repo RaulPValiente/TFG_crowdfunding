@@ -4,17 +4,13 @@ export const navlinks = [
       link: '/',
     },
     {
-      name: 'Campaign',
+      name: 'Create Campaign',
       link: '/create-campaign',
     },
     {
       name: 'Profile',
       link: '/profile',
     },
-    {
-      name: 'Logout',
-      link: '/',
-      disabled: true,
-    },
+  
   ];
   
