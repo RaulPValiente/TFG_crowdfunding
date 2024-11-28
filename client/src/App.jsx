@@ -12,7 +12,7 @@ const App = () => {
         
       </div>
 
-      <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5 mt-4">
+      <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto mt-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />

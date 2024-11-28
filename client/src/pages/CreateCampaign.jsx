@@ -44,22 +44,23 @@ const CreateCampaign = () => {
   };
 
   return (
-    <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:py-10 sm:px-10 p-4">
+    <div className="bg-black/60 border border-white/20 w-full lg:w-[1200px] flex justify-center items-center flex-col rounded-lg sm:py-10 sm:px-10 p-4">
+
       {isLoading && <Loader />}
-      <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] flex-col">
-        <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white">
+      <div className="flex justify-center items-center p-[16px] w-full flex-col">
+        <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white text-center">
           New Campaign
         </h1>
-        <h2 className="flex-1 sm:text-[15px] text-[10px] leading-[38px] text-white/70">
+        <h2 className="flex-1 sm:text-[15px] text-[12px] leading-[22px] text-white/70 text-center">
           Take Your Project to the Next Level
         </h2>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="w-full mt-[20px] flex flex-col gap-[30px]"
+        className="w-full mt-[20px] flex flex-col gap-[20px] sm:gap-[30px]"
       >
-        <div className="flex flex-wrap gap-[40px]">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-[20px] sm:gap-[40px]">
           <FormField
             labelName="Your Name *"
             placeholder="Raúl Pérez"
@@ -84,7 +85,7 @@ const CreateCampaign = () => {
           handleChange={(e) => handleFormFieldChange('description', e)}
         />
 
-        <div className="flex flex-wrap gap-[40px]">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-[20px] sm:gap-[40px]">
           <FormField
             labelName="Fundraise Goal *"
             placeholder="10 ETH"
@@ -113,7 +114,7 @@ const CreateCampaign = () => {
           <CustomButton
             btnType="submit"
             title="Submit Campaign"
-            styles="bg-gradient-to-r from-[#785dc7] to-[#4a34a5] px-3 py-1 text-[14px] rounded-lg border border-white/20 hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf]"
+            styles="bg-gradient-to-r from-[#785dc7] to-[#4a34a5] px-4 py-2 text-[14px] rounded-lg border border-white/20 hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf] w-full sm:w-auto"
           />
         </div>
       </form>

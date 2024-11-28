@@ -1,6 +1,11 @@
-import PropTypes from 'prop-types';
-
-const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handleChange }) => {
+const FormField = ({ 
+  labelName = '', 
+  placeholder = '', 
+  inputType = 'text', 
+  isTextArea = false, 
+  value = '', 
+  handleChange 
+}) => {
   return (
     <label className="flex-1 w-full flex flex-col">
       {labelName && (
@@ -30,25 +35,6 @@ const FormField = ({ labelName, placeholder, inputType, isTextArea, value, handl
       )}
     </label>
   );
-};
-
-
-FormField.propTypes = {
-  labelName: PropTypes.string,
-  placeholder: PropTypes.string,
-  inputType: PropTypes.string,
-  isTextArea: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  handleChange: PropTypes.func.isRequired,
-};
-
-
-FormField.defaultProps = {
-  labelName: '',
-  placeholder: '',
-  inputType: 'text',
-  isTextArea: false,
-  value: '',
 };
 
 export default FormField;
