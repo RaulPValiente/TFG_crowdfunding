@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 
-import { Navbar, Navlinks } from './components';
+import { Navbar } from './components';
 import { CampaignDetails, CreateCampaign, Home, Profile } from './pages';
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div className="sm:-8 p-4 bg-[#05000f] min-h-screen flex flex-col">
       <div className="w-full">
         <Navbar />
-        <Navlinks />
+        
       </div>
 
       <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5 mt-4">

@@ -44,7 +44,7 @@ const CreateCampaign = () => {
   };
 
   return (
-    <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:py-3 sm:px-10 p-4">
+    <div className="bg-black/60 border border-white/20 w-[1200px] flex justify-center items-center flex-col rounded-lg sm:py-10 sm:px-10 p-4">
       {isLoading && <Loader />}
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] flex-col">
         <h1 className="flex-1 font-bold sm:text-[30px] text-[20px] leading-[38px] text-white">
