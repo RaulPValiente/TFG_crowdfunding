@@ -88,7 +88,3 @@ contract Crowdfunding {
 
     }
 }
-
-// Wallet Private Key: a26f1f0234294e9f441f8c73bc4cdf1d7e5ab779c4b92d1eb8d1a075353ea4c8
-// Thirdweb Client ID: 23f367c462a36456d61d8321e9c3aaec
-// Thirdweb SecretKey: Y1sGqSq-f9FPiXzF5ODeLybPxr3BAnJ5m-7h1WuRCyTskZHZhGzoIjjaGqih8zBq4XkZba-Q4BZBvBowdVPxZA

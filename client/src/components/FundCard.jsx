@@ -1,5 +1,5 @@
 import { user } from '../assets';
-import { daysLeft } from '../helpers';
+import { daysLeft, BarPercentage } from '../helpers';
 
 const FundCard = ({
   owner,
@@ -21,11 +21,20 @@ const FundCard = ({
       <img
         src={image}
         alt="fund"
-        className="w-full h-[162px] object-cover border-b border-white/10"
+        className="w-full h-[162px] object-cover"
       />
 
+      <div className="relative w-full h-[10px] bg-[#3a3a43]">
+        <div
+          className="absolute h-full bg-[#00bb2d]"
+          style={{
+            width: `${BarPercentage(target, amountCollected)}%`,
+            maxWidth: '100%',
+          }}
+        ></div>
+      </div>
+
       <div className="flex flex-col p-4">
-        
         <div className="block">
           <h3 className="font-epilogue font-semibold text-[16px] text-white text-left leading-[26px] truncate">
             {title}

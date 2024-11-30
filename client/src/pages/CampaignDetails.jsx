@@ -46,11 +46,11 @@ const CampaignDetails = () => {
           <img
             src={state.image}
             alt="campaign"
-            className="w-full h-[410px] object-cover rounded-xl"
+            className="w-full h-[410px] object-cover rounded-lg"
           />
-          <div className="relative w-full h-[5px] bg-[#3a3a43] mt-2">
+          <div className="relative w-full h-[10px] bg-[#3a3a43] mt-3 rounded-sm">
             <div
-              className="absolute h-full bg-[#4acd8d]"
+              className="absolute h-full bg-[#00bb2d] rounded-sm"
               style={{
                 width: `${BarPercentage(
                   state.target,
@@ -58,7 +58,8 @@ const CampaignDetails = () => {
                 )}%`,
                 maxWidth: '100%',
               }}
-            ></div>
+            >
+            </div>
           </div>
         </div>
 
@@ -123,7 +124,7 @@ const CampaignDetails = () => {
                       {index + 1}. {item.donator}
                     </p>
                     <p className="font-epilogue font-normal text-[16px] text-[#808191] leading-[26px] break-ll">
-                      {item.donation}
+                      {item.donation} ETH
                     </p>
                   </div>
                 ))
@@ -144,7 +145,7 @@ const CampaignDetails = () => {
             <div className="mt-[30px]">
               <input
                 type="number"
-                placeholder="ETH 0.1"
+                placeholder="0.1 ETH"
                 step="0.01"
                 className="w-full py-[10px] sm:px-[20px] px-[15px] outline-none border-[1px] border-[#3a3a43] bg-transparent font-epilogue text-white text-[18px] leading-[30px] placeholder:text-[#4b5264] rounded-[10px]"
                 value={amount}
