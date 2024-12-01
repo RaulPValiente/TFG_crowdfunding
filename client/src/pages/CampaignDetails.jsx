@@ -58,8 +58,7 @@ const CampaignDetails = () => {
                 )}%`,
                 maxWidth: '100%',
               }}
-            >
-            </div>
+            ></div>
           </div>
         </div>
 
@@ -73,8 +72,8 @@ const CampaignDetails = () => {
         </div>
       </div>
 
-      <div className="mt-[60px] flex lg:flex-row flex-col gap-5">
-        <div className="flex-[2] flex flex-col gap-[40px]">
+      <div className="mt-[20px] flex lg:flex-row flex-col gap-5">
+        <div className="flex-[2] flex flex-col gap-[30px]">
           <div>
             <h4 className="font-epilogue font-semibold text-[18px] text-white uppercase">
               Creator
@@ -120,10 +119,10 @@ const CampaignDetails = () => {
                     key={`${item.donator}-${index}`}
                     className="flex justify-between items-center gap-4"
                   >
-                    <p className="font-epilogue font-normal text-[16px] text-[#b2b3bd] leading-[26px] break-ll">
+                    <p className="font-epilogue font-normal text-[16px] text-[#b2b3bd] leading-[26px] truncate max-w-[200px] sm:max-w-none">
                       {index + 1}. {item.donator}
                     </p>
-                    <p className="font-epilogue font-normal text-[16px] text-[#808191] leading-[26px] break-ll">
+                    <p className="font-epilogue font-normal text-[16px] text-[#808191] leading-[26px]">
                       {item.donation} ETH
                     </p>
                   </div>
@@ -137,38 +136,36 @@ const CampaignDetails = () => {
           </div>
         </div>
 
-        <div className="flex-1 ml-20">
-          <div className="mt-[20px] flex flex-col p-4 bg-black/60 border border-white/10 rounded-[10px]">
-            <p className="font-epilogue fount-medium text-[20px] leading-[30px] text-center text-white">
-              Start Investing
-            </p>
-            <div className="mt-[30px]">
-              <input
-                type="number"
-                placeholder="0.1 ETH"
-                step="0.01"
-                className="w-full py-[10px] sm:px-[20px] px-[15px] outline-none border-[1px] border-[#3a3a43] bg-transparent font-epilogue text-white text-[18px] leading-[30px] placeholder:text-[#4b5264] rounded-[10px]"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-              />
+        <div className="flex-1 lg:ml-20 mt-[20px] flex flex-col p-4 bg-black/60 border border-white/10 rounded-[10px]">
+          <p className="font-epilogue fount-medium text-[20px] leading-[30px] text-center text-white">
+            Start Investing
+          </p>
+          <div className="mt-[30px]">
+            <input
+              type="number"
+              placeholder="0.1 ETH"
+              step="0.01"
+              className="w-full py-[10px] sm:px-[20px] px-[15px] outline-none border-[1px] border-[#3a3a43] bg-transparent font-epilogue text-white text-[18px] leading-[30px] placeholder:text-[#4b5264] rounded-[10px]"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
 
-              <div className="my-[20px] p-4 bg-[#13131a] rounded-[10px]">
-                <h4 className="font-epilogue font-bold text-[16px] leading-[24px] text-white">
-                  Invest and Earn 💸
-                </h4>
-                <p className="mt-[10px] font-epilogue font-normal text-[14px] leading-[20px] text-[#808191]">
-                  Unlock the power of passive income by supporting innovative
-                  projects.
-                </p>
-              </div>
-
-              <CustomButton
-                btnType="button"
-                title="Fund Campaign"
-                styles="w-full h-11 bg-gradient-to-r from-[#785dc7] to-[#4a34a5] rounded-lg hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf] shadow border border-white cursor-pointer"
-                handleClick={handleDonate}
-              />
+            <div className="my-[20px] p-4 bg-[#13131a] rounded-[10px]">
+              <h4 className="font-epilogue font-bold text-[16px] leading-[24px] text-white">
+                Invest and Earn 💸
+              </h4>
+              <p className="mt-[10px] font-epilogue font-normal text-[14px] leading-[20px] text-[#808191]">
+                Unlock the power of passive income by supporting innovative
+                projects.
+              </p>
             </div>
+
+            <CustomButton
+              btnType="button"
+              title="Fund Campaign"
+              styles="w-full h-11 bg-gradient-to-r from-[#785dc7] to-[#4a34a5] rounded-lg hover:bg-gradient-to-l hover:from-[#9d80ff] hover:to-[#6b4fcf] shadow border border-white cursor-pointer"
+              handleClick={handleDonate}
+            />
           </div>
         </div>
       </div>
