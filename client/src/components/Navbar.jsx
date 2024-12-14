@@ -4,6 +4,7 @@ import { useStateContext } from '../state';
 import { eth, user } from '../assets';
 import { navlinks } from '../constants';
 import { CustomButton } from './';
+import { metamaskWallet } from '@thirdweb-dev/react';
 
 const Navbar = () => {
   const { connect, disconnect, address } = useStateContext();
@@ -11,11 +12,19 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState('Home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleWalletAction = () => {
-    if (address) {
-      disconnect();
-    } else {
-      connect();
+  const handleWalletAction = async () => {
+    try {
+        if (address) {
+            console.log("Desconectando...");
+            await disconnect();
+            console.log("Desconectado.");
+        } else {
+            console.log("Intentando conectar...");
+            const result = await connect(metamaskWallet());
+            console.log("Conexión exitosa:", result);
+        }
+    } catch (error) {
+        console.error("Error al manejar la wallet:", error);
     }
   };
 
